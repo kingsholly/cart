@@ -10,10 +10,10 @@ function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(calculateTotals());
-  }, [cartItems]);
+  }, [cartItems, dispatch]);
   useEffect(() => {
     dispatch(getCartItems());
-  }, []);
+  }, [dispatch]);
   if (isLoading) {
     return (
       <div className="loading">
